@@ -10,6 +10,7 @@ def get_blog_article_urls():
     urls = [a.attrs['href'] for a in soup.select('a.more-link')]
     return urls
 
+
 def parse_blog_article(soup):
     return {
         'title': soup.select_one('h1.entry-title').text,
